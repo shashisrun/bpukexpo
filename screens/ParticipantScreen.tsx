@@ -4,7 +4,7 @@ import { Platform, StyleSheet, Image, Dimensions, ScrollView } from 'react-nativ
 
 import { Text, View } from '../components/Themed';
 
-export default function OrganizerScreen({ route }) {
+export default function AthleteScreen({ route }) {
     const d = route.params;
   return (
       <ScrollView>
@@ -13,10 +13,6 @@ export default function OrganizerScreen({ route }) {
         <View style={styles.textcontainer}>
             <Text style={styles.title}>{d.name}</Text>
             <Text>{d.description}</Text>
-            <View style={styles.social}>
-              <Text>Website: {d.website}</Text>
-              <Text>Instagram: {d.instagram}</Text>
-            </View>
         </View>
         </View>
       </ScrollView>
@@ -40,10 +36,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-  },
-  social: {
-    marginTop: 15,
-    textAlign: 'left',
   },
   thumbnail: {
     width: Dimensions.get('window').width,

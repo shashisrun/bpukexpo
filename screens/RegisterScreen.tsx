@@ -130,7 +130,7 @@ const RegisterScreen = (props) => {
           <Image
             source={require('../assets/images/icon.png')}
             style={{
-              width: '50%',
+              width: 200,
               height: 100,
               resizeMode: 'contain',
               margin: 30,
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
+    color: '#8b9cb5',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,

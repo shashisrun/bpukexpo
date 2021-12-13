@@ -7,29 +7,31 @@ import { RootTabScreenProps } from '../types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function EventScreen({ route, navigation }) {
-  const [data, setData] = React.useState({});
+  // const [data, setData] = React.useState({});
   const d = route.params;
   
-  React.useEffect( async () => {
+  // React.useEffect( async () => {
     //Check if user_id is set or not
     //If not then send for Authentication
     //else send to Home Screen
   
-    const token = await AsyncStorage.getItem('token');
-    const rawdata = await fetch('https://expoapp.bodypower.com/public/api/events/'+ d.id, { 
-          method: 'GET',
-          headers: {
-            //Header Defination
-            'Content-Type':
-            'application/json',
-            'Authorization':
-            'Bearer ' + token,
-          },
-        });
-    const json = await rawdata.json();
-    // console.log(json);
-    setData(json);
-  });
+    // const token = await AsyncStorage.getItem('token');
+    // const rawdata = await fetch('https://expoapp.bodypower.com/public/api/events/'+ d.id, { 
+    //       method: 'GET',
+    //       headers: {
+    //         //Header Defination
+    //         'Content-Type':
+    //         'application/json',
+    //         'Authorization':
+    //         'Bearer ' + token,
+    //       },
+    //     });
+    // const json = await rawd.json();
+    // // console.log(json);
+    // // setData(json);
+    // const json = await AsyncStorage.getItem('events_'+d.id);
+    // setData(JSON.parse(json));
+  // });
   // console.log(d);
   // console.log(data);
   // console.log(d);
@@ -37,32 +39,32 @@ export default function EventScreen({ route, navigation }) {
     <ScrollView>
       <View style={styles.separator}>
             <View style={styles.container}>
-                <Image source={{uri: data.thumbnail}} style={styles.image} />
+                <Image source={{uri: d.thumbnail}} style={styles.image} />
                 <View style={styles.textcontainer}>
-                    {data.organizer != null &&
-                      <TouchableOpacity onPress={() => navigation.navigate('Organizer', data.organizer)}>
-                        <Text>Organized by {data.organizer.name}</Text>
+                    {d.organizer != null &&
+                      <TouchableOpacity onPress={() => navigation.navigate('Organizer', d.organizer)}>
+                        <Text>Organized by {d.organizer.name}</Text>
                       </TouchableOpacity>
                     }
-                    <Text style={styles.title}>{data.name}</Text>
-                        <Text>{data.description}</Text>
-                    <Text style={{ fontWeight: 'bold', marginTop: 10 }}>Event Time : {data.time}</Text>
-                      {data.organizer != null &&
-                        <TouchableOpacity onPress={() => navigation.navigate('Zone', data.zone)}>
-                          <Text style={{ fontWeight: 'bold', marginTop: 10 }}>Zone : {data.zone.name}</Text>
+                    <Text style={styles.title}>{d.name}</Text>
+                        <Text>{d.description}</Text>
+                    <Text style={{ fontWeight: 'bold', marginTop: 10 }}>Event Time : {d.time}</Text>
+                      {d.organizer != null &&
+                        <TouchableOpacity onPress={() => navigation.navigate('Zone', d.zone)}>
+                          <Text style={{ fontWeight: 'bold', marginTop: 10 }}>Zone : {d.zone.name}</Text>
                         </TouchableOpacity>
                       }
                 </View>
-                {data.participants != null &&
+                {d.participants != null &&
                   <View style={styles.container}>
                       <Text style={styles.title}>Participating Athletes</Text>
-                      {data.participants.map(participant =>(
+                      {d.participants.map(participant =>(
                         <View style={styles.list}>
                             <Image source={{uri: participant.thumbnail}} style={styles.participantimage} />
                             <View style={{backgroundColor:"#e9e9e9", width: 250, borderRadius: 20}}>
                                 <Text style = {{marginHorizontal: 40, fontWeight: 'bold'}}>{participant.name}</Text>
                               <Text style={{marginVertical: 10}} numberOfLines={3}>{participant.description}</Text>
-                                <TouchableOpacity onPress={() => navigation.navigate('Athlete', participant)}>
+                                <TouchableOpacity onPress={() => navigation.navigate('Participant', participant)}>
                                     <Text style={styles.btn}>View</Text>
                                 </TouchableOpacity>
                             </View>

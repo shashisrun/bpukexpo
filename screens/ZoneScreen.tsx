@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ScrollView, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+// import Data from './../data/Data'
 
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
@@ -7,52 +8,59 @@ import { RootTabScreenProps } from '../types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function ZonesScreen({ route, navigation }: RootTabScreenProps<'TabOne'>) {
-  const [data, setData] = React.useState({});
+  // const [data, setData] = React.useState({});
+  // const [preloader, setPreloader] = React.useState(true);
   const d = route.params;
   
-  React.useEffect( async () => {
-    //Check if user_id is set or not
-    //If not then send for Authentication
-    //else send to Home Screen
+  // React.useEffect( async () => {
+  //   //Check if user_id is set or not
+  //   //If not then send for Authentication
+  //   //else send to Home Screen
   
-    const token = await AsyncStorage.getItem('token');
-    const rawdata = await fetch('https://expoapp.bodypower.com/public/api/zones/'+ d.id, { 
-          method: 'GET',
-          headers: {
-            //Header Defination
-            'Content-Type':
-            'application/json',
-            'Authorization':
-            'Bearer ' + token,
-          },
-        });
-    const json = await rawdata.json();
-    // console.log(json);
-    setData(json);
-  });
+  //   // const token = await AsyncStorage.getItem('token');
+  //   // const rawdata = await fetch('https://expoapp.bodypower.com/public/api/zones/'+ d.id, { 
+  //   //   method: 'GET',
+  //   //   headers: {
+  //   //     //Header Defination
+  //   //     'Content-Type':
+  //   //     'application/json',
+  //   //     'Authorization':
+  //   //     'Bearer ' + token,
+  //   //   },
+  //   // });
+  //   // const json = await rawdata.json();
+  //   // // console.log(json);
+  //   // setData(json);
+  //   const data = new Data;
+  //   const newData = await data.getData('zone_'+ d.id);
+  //   if(newData != null) {
+  //     setData(newData);
+  //     setPreloader(false);
+  //   }
+  // });
   // console.log(d);
-  console.log(data);
+  // console.log(data);
   // console.log(d);
   return (
     <ScrollView>
       <View style={styles.separator}>
           <View style={styles.container}>
-            <Image source={{uri: data.thumbnail}} style={styles.image} />
+            <Image source={{uri: d.thumbnail}} style={styles.image} />
             <View style={styles.textcontainer}>
-              <Text style={styles.title}>{data.name}</Text>
-              <Text>{data.description}</Text>
+              <Text style={styles.title}>{d.name}</Text>
+              <Text>{d.description}</Text>
             </View>
           </View>
           { 
-            data.events != null &&
-              data.events.length > 0 &&
+            d.events != null &&
+              d.events.length > 0 &&
                 <View style={styles.container} lightColor="#fff" darkColor="#242424">
                   <Text style={styles.title}>Events</Text>
-                  {data.events.map(e =>(
+                  {d.events.map(e =>(
                     <View style={styles.list}>
                         <Image source={{uri: e.thumbnail}} style={styles.eventimage} />
-                        <View style={{backgroundColor:"#e9e9e9", width: 250, borderRadius: 20}}>
-                            <Text style = {{marginHorizontal: 40, fontWeight: 'bold'}}>{e.name}</Text>
+                        <View style={{width: Dimensions.get('window').width/1.7}}>
+                            <Text style = {{fontWeight: 'bold'}}>{e.name}</Text>
                             <Text style={{marginVertical: 10}} numberOfLines={2} >{e.description}</Text>
                             <TouchableOpacity onPress={() => navigation.navigate('Event', e)}>
                                 <Text style={styles.btn}>View</Text>
@@ -97,23 +105,20 @@ const styles = StyleSheet.create({
     paddingVertical: 7,
     color: "#000",
     textAlign: 'center',
-    marginLeft: 20
   },
   list: {
+    width: Dimensions.get('window').width-12,
     marginVertical: 5,
     marginHorizontal: 6,
-    padding: 10,
-    backgroundColor: "#e9e9e9",
+    paddingVertical: 10,
+    paddingHorizontal: 10,
     flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 25,
   },
   eventimage: {
     width: Dimensions.get('window').width/4,
+    height: ((Dimensions.get('window').width/5)*5)/4,
     marginRight: 20,
     marginVertical: 10,
     borderRadius: 25,
-    height: ((Dimensions.get('window').width/5)*5)/4,
   },
 });

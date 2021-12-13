@@ -13,9 +13,11 @@ import { ColorSchemeName, Pressable } from 'react-native';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import NotificationScreen from '../screens/NotificationScreen';
+import SearchScreen from '../screens/SearchScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import ZonesScreen from '../screens/ZonesScreen';
 import AthletesScreen from '../screens/AthletesScreen';
+import AthleteScreen from '../screens/AthleteScreen';
 import EventsScreen from '../screens/EventsScreen';
 import MapScreen from '../screens/MapScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -26,8 +28,9 @@ import ParticipateScreen from '../screens/ParticipateScreen';
 import SplashScreen from '../screens/SplashScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
-import AthleteScreen from '../screens/AthleteScreen';
+import ParticipantScreen from '../screens/ParticipantScreen';
 import OrganizerScreen from '../screens/OrganizerScreen';
+import ScheduleScreen from '../screens/ScheduleScreen';
 
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -66,13 +69,6 @@ const Auth = () => {
         component={RegisterScreen}
         options={{
           title: 'Register', //Set Header Title
-          headerStyle: {
-            backgroundColor: '#307ecc', //Set Header color
-          },
-          headerTintColor: '#fff', //Set Header text color
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
-          },
         }}
       />
     </Stack.Navigator>
@@ -96,10 +92,11 @@ function RootNavigator() {
           options={{headerShown: false}}
         />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Notification" component={NotificationScreen} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
+        <Stack.Screen name="Search" component={SearchScreen} />
         <Stack.Screen
-          name="Athlete"
-          component={AthleteScreen}
+          name="Participant"
+          component={ParticipantScreen}
           options={({ route }) => ({ title: route.params.name })}
         />
         <Stack.Screen
@@ -107,10 +104,20 @@ function RootNavigator() {
           component={OrganizerScreen}
           options={({ route }) => ({ title: route.params.name })}
         />
+         <Stack.Screen
+        name="Schedule"
+        component={ScheduleScreen}
+        options={({ route }) => ({ title: route.params.name })}
+      />
       </Stack.Group>
       <Stack.Screen
         name="Event"
         component={EventScreen}
+        options={({ route }) => ({ title: route.params.name })}
+      />
+      <Stack.Screen
+        name="Athlete"
+        component={AthleteScreen}
         options={({ route }) => ({ title: route.params.name })}
       />
       <Stack.Screen
@@ -143,26 +150,25 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Zones"
+      initialRouteName="Notifications"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}
       tabBar={props => <TabBar {...props} />}
       >
       <BottomTab.Screen
-        name="Zones"
-        component={ZonesScreen}
+        name="Notifications"
+        component={NotificationScreen}
         options={({ navigation }: RootTabScreenProps<'Zones'>) => ({
-          title: 'Zones',
-          tabBarIcon: ({ color  }) => <TabBarIcon name="code" color={color} />,
+          title: 'Feeds',
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Settings')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
               <FontAwesome
-                name="bell"
+                name="gear"
                 size={25}
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
@@ -171,7 +177,43 @@ function BottomTabNavigator() {
           ),
           headerLeft: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Search')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+              <FontAwesome
+                name="search"
+                size={25}
+                color={Colors[colorScheme].text}
+                style={{ marginLeft: 15 }}
+              />
+            </Pressable>
+          ),
+        })}
+      />
+      <BottomTab.Screen
+        name="Zones"
+        component={ZonesScreen}
+        options={({ navigation }: RootTabScreenProps<'Zones'>) => ({
+          title: 'Zones',
+          tabBarIcon: ({ color  }) => <TabBarIcon name="code" color={color} />,
+          headerRight: () => (
+            <Pressable
+              onPress={() => navigation.navigate('Settings')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+              <FontAwesome
+                name="gear"
+                size={25}
+                color={Colors[colorScheme].text}
+                style={{ marginRight: 15 }}
+              />
+            </Pressable>
+          ),
+          headerLeft: () => (
+            <Pressable
+              onPress={() => navigation.navigate('Search')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
@@ -192,12 +234,12 @@ function BottomTabNavigator() {
           title: 'Events',
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Settings')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
               <FontAwesome
-                name="bell"
+                name="gear"
                 size={25}
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
@@ -206,7 +248,7 @@ function BottomTabNavigator() {
           ),
           headerLeft: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Search')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
@@ -227,12 +269,12 @@ function BottomTabNavigator() {
           title: 'Athletes',
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Settings')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
               <FontAwesome
-                name="bell"
+                name="gear"
                 size={25}
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
@@ -241,7 +283,7 @@ function BottomTabNavigator() {
           ),
           headerLeft: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Search')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
@@ -262,12 +304,12 @@ function BottomTabNavigator() {
           title: 'Floorplan',
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Settings')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
               <FontAwesome
-                name="bell"
+                name="gear"
                 size={25}
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
@@ -276,42 +318,7 @@ function BottomTabNavigator() {
           ),
           headerLeft: () => (
             <Pressable
-              onPress={() => navigation.navigate('Notification')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="search"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginLeft: 15 }}
-              />
-            </Pressable>
-          ),
-        })}
-      />
-      <BottomTab.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={({ navigation }: RootTabScreenProps<'Zones'>) => ({
-          title: 'Settings',
-          headerRight: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Notification')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="bell"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
-          ),
-          headerLeft: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Notification')}
+              onPress={() => navigation.navigate('Search')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>

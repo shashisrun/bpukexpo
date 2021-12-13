@@ -18,9 +18,9 @@ const  NavigationIcon = ({route, isFocused}: NavigationIconProps) => {
         case "Events":
           return isFocues?<MaterialIcons name="emoji-events" size={27} color="#242424"/>: <MaterialIcons name="emoji-events" size={27} color="#242424"/>
         case "Zones":
-          return isFocues?<FontAwesome5 name="compass" size={27} color="#242424"/>: <FontAwesome5 name="compass" size={27} color="#242424"/>
-        case "Settings":
-          return isFocues?<Ionicons name="settings" size={27} color="#242424"/>: <Ionicons name="settings" size={27} color="#242424"/>
+          return isFocues?<FontAwesome5 name="anchor" size={27} color="#242424"/>: <FontAwesome5 name="anchor" size={27} color="#242424"/>
+        case "Feeds":
+          return isFocues?<Ionicons name="compass" size={27} color="#242424"/>: <Ionicons name="compass" size={27} color="#242424"/>
       default:
         break;
     }

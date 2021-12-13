@@ -23,7 +23,7 @@ const LoginScreen = ({navigation}) => {
 
   const passwordInputRef = createRef();
 
-  const handleSubmitPress = () => {
+  const handleSubmitPress = async () => {
     setErrortext('');
     if (!userEmail) {
       alert('Please fill Email');
@@ -43,7 +43,7 @@ const LoginScreen = ({navigation}) => {
     }
     formBody = formBody.join('&');
 
-    fetch('https://expoapp.bodypower.com/public/api/login', {
+    await fetch('https://expoapp.bodypower.com/public/api/login', {
       method: 'POST',
       body: formBody,
       headers: {
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     flex: 1,
-    color: 'white',
+    color: '#8b9cb5',
     paddingLeft: 15,
     paddingRight: 15,
     borderWidth: 1,

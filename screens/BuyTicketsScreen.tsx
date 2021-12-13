@@ -14,24 +14,24 @@ export default function BuyTicketsScreen({ route, navigation }){
                     <TextInput
                         placeholder="Enter your Name"
                         onChangeText={(text) => {this.setState({name:text})}}
-                        style={{borderWidth: 2, borderColor: "#ffe51e", margin: 20, padding:10}}
+                        style={{borderWidth: 2,borderColor: '#dadae8', marginHorizontal: 20, marginVertical:10, paddingHorizontal:20,padding:10,borderRadius:50,}}
                     />
                     <TextInput
                         placeholder="Enter your Email"
                         onChangeText={(text) => {this.setState({email:text})}}
-                        style={{borderWidth: 2, borderColor: "#ffe51e", margin: 20, padding:10}}
+                        style={{borderWidth: 2,borderColor: '#dadae8', marginHorizontal: 20, marginVertical:10, paddingHorizontal:20,padding:10,borderRadius:50,}}
                     />
                     <TextInput
                         placeholder="Phone Number"
                         onChangeText={(text) => {this.setState({phone:text})}}
                         keyboardType={'numeric'}
-                        style={{borderWidth: 2, borderColor: "#ffe51e", margin: 20, padding:10}}
+                        style={{borderWidth: 2,borderColor: '#dadae8', marginHorizontal: 20, marginVertical:10, paddingHorizontal:20,padding:10,borderRadius:50,}}
                     />
                     <TextInput  
                         placeholder="Quantity"  
                         underlineColorAndroid='transparent'
                         keyboardType={'numeric'}
-                        style={{borderWidth: 2, borderColor: "#ffe51e", margin: 20, padding:10}}
+                        style={{borderWidth: 2,borderColor: '#dadae8', marginHorizontal: 20, marginVertical:10, paddingHorizontal:20,padding:10,borderRadius:50,}}
                     /> 
                     <TouchableOpacity onPress={() => navigation.navigate('Zone', d)}>
                                     <Text style={styles.btn}>Buy Now</Text>
@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     color: "#000",
     textAlign: 'center',
     marginLeft: 20,
-    marginRight: 20
+    marginRight: 20,
+    marginVertical: 20,
   },
   title: {
     fontSize: 20,
