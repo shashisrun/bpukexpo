@@ -60,7 +60,7 @@ const RegisterScreen = (props) => {
     }
     formBody = formBody.join('&');
 
-    fetch('https://expoapp.bodypower.com/public/api/register', {
+    fetch('https://expoapp.bodypower.com/api/register', {
       method: 'POST',
       body: formBody,
       headers: {

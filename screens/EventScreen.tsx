@@ -1,40 +1,27 @@
 import * as React from 'react';
 import { ScrollView, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
 
 import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
-
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import Data from './../data/Data'
 
 export default function EventScreen({ route, navigation }) {
-  // const [data, setData] = React.useState({});
+  const [zoneData, setZoneData] = React.useState([]);
   const d = route.params;
   
-  // React.useEffect( async () => {
-    //Check if user_id is set or not
-    //If not then send for Authentication
-    //else send to Home Screen
-  
-    // const token = await AsyncStorage.getItem('token');
-    // const rawdata = await fetch('https://expoapp.bodypower.com/public/api/events/'+ d.id, { 
-    //       method: 'GET',
-    //       headers: {
-    //         //Header Defination
-    //         'Content-Type':
-    //         'application/json',
-    //         'Authorization':
-    //         'Bearer ' + token,
-    //       },
-    //     });
-    // const json = await rawd.json();
-    // // console.log(json);
-    // // setData(json);
-    // const json = await AsyncStorage.getItem('events_'+d.id);
-    // setData(JSON.parse(json));
-  // });
-  // console.log(d);
-  // console.log(data);
-  // console.log(d);
+
+  React.useEffect(() => {
+    const data = new Data;
+    const unsubscribe = navigation.addListener('focus', async () => {
+      // The screen is focused
+      // Call any action
+      const newZoneData = await data.getData('zones');
+      if(newZoneData != null) {
+        setZoneData(newZoneData);
+
+    }
+  })
+})
   return (
     <ScrollView>
       <View style={styles.separator}>
@@ -49,10 +36,18 @@ export default function EventScreen({ route, navigation }) {
                     <Text style={styles.title}>{d.name}</Text>
                         <Text>{d.description}</Text>
                     <Text style={{ fontWeight: 'bold', marginTop: 10 }}>Event Time : {d.time}</Text>
-                      {d.organizer != null &&
-                        <TouchableOpacity onPress={() => navigation.navigate('Zone', d.zone)}>
-                          <Text style={{ fontWeight: 'bold', marginTop: 10 }}>Zone : {d.zone.name}</Text>
-                        </TouchableOpacity>
+                      {d.zone_id != null && zoneData.length > 0 &&
+                        <View>
+                          {zoneData.map((zone) =>{
+                            <View>
+                              {zone.id == d.zone_id &&
+                                <TouchableOpacity onPress={() => navigation.navigate('Zone', zone)}>
+                                  <Text style={{ fontWeight: 'bold', marginTop: 10 }}>Zone : {zone.name}</Text>
+                                </TouchableOpacity>
+                              }
+                            </View>
+                          })}
+                        </View>
                       }
                 </View>
                 {d.participants != null &&
@@ -61,7 +56,7 @@ export default function EventScreen({ route, navigation }) {
                       {d.participants.map(participant =>(
                         <View style={styles.list}>
                             <Image source={{uri: participant.thumbnail}} style={styles.participantimage} />
-                            <View style={{backgroundColor:"#e9e9e9", width: 250, borderRadius: 20}}>
+                            <View style={{width: 250, borderRadius: 20}}>
                                 <Text style = {{marginHorizontal: 40, fontWeight: 'bold'}}>{participant.name}</Text>
                               <Text style={{marginVertical: 10}} numberOfLines={3}>{participant.description}</Text>
                                 <TouchableOpacity onPress={() => navigation.navigate('Participant', participant)}>
@@ -72,6 +67,20 @@ export default function EventScreen({ route, navigation }) {
                       ))}
                   </View>
                 }
+                <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}} lightColor="#fff" darkColor="#242424">
+                <TouchableOpacity
+                  onPress={async () => await WebBrowser.openBrowserAsync(d.register_link)}
+                  style={{ marginTop: 10, paddingHorizontal: 5, paddingVertical: 10 }}
+                >
+                  <Text style={{backgroundColor: '#ffe51e', borderRadius: 15, paddingHorizontal: 30, paddingVertical: 10, color: "#000"}}>Register Now</Text>
+                </TouchableOpacity>
+                {/* <TouchableOpacity
+                  onPress={() => navigation.navigate('BuyTicket', d)}
+                  style={{ marginTop: 10, paddingHorizontal: 5, paddingVertical: 10 }}
+                >
+                  <Text style={{backgroundColor: '#ffe51e', borderRadius: 15, paddingHorizontal: 30, paddingVertical: 10, color: "#000"}}>Buy Tickets</Text>
+                </TouchableOpacity> */}
+              </View>
             </View>
       </View>
     </ScrollView>
@@ -104,7 +113,6 @@ const styles = StyleSheet.create({
   list: {
     marginVertical: 5,
     padding: 10,
-    backgroundColor: "#e9e9e9",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",

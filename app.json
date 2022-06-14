@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "bpuktabs",
+    "name": "BodyPower Expo",
     "slug": "bpuktabs",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,12 +20,20 @@
     ],
     "ios": {
       "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyD3_I3PBXR815iYqkLJhiapEUfKORSFmWA"
+      },
       "bundleIdentifier": "expo.bodypower.com"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD3_I3PBXR815iYqkLJhiapEUfKORSFmWA"
+        }
       },
       "package": "expo.bodypower.com"
     },

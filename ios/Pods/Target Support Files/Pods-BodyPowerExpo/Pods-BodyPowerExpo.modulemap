@@ -1,0 +1,6 @@
+module Pods_BodyPowerExpo {
+  umbrella header "Pods-BodyPowerExpo-umbrella.h"
+
+  export *
+  module * { export * }
+}

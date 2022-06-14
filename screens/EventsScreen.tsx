@@ -5,45 +5,42 @@ import Data from './../data/Data'
 import { Text, View } from '../components/Themed';
 import Bottom from '../components/Bottom';
 import { RootTabScreenProps } from '../types';
+import * as WebBrowser from 'expo-web-browser';
 
 
 export default function EventsScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   const [data, setData] = React.useState([]);
   const [zoneData, setZoneData] = React.useState([]);
+  const [userData, setUserData] = React.useState([]);
   const [preloader, setPreloader] = React.useState(true);
   
-  React.useEffect( async () => {
-    //Check if user_id is set or not
-    //If not then send for Authentication
-    //else send to Home Screen
-  
-    // const token = await AsyncStorage.getItem('token');
-    // const rawdata = await fetch('https://expoapp.bodypower.com/public/api/events', { 
-    //       method: 'GET',
-    //       headers: {
-    //         //Header Defination
-    //         'Content-Type':
-    //         'application/json',
-    //         'Authorization':
-    //         'Bearer ' + token,
-    //       },
-    //     });
-    // const json = await rawdata.json();
-    // // console.log(json);
-    // setData(json);
+  React.useEffect(() => {
     const data = new Data;
-    const newData = await data.getData('events');
-    if(newData != null) {
-      setData(newData);
-    }
-    const newZoneData = await data.getData('zones');
-    if(newZoneData != null) {
-      setZoneData(newZoneData);
-      setPreloader(false);
-    }
-  });
+    const unsubscribe = navigation.addListener('focus', async () => {
+      // The screen is focused
+      // Call any action
+      const newData = await data.getData('events');
+      if(newData != null) {
+          setData(newData);
+      }
+      const newZoneData = await data.getData('zones');
+      if(newZoneData != null) {
+          setZoneData(newZoneData);
+          // setPreloader(false);
+      }
+      const newUserData = await data.getData('user');
+      if(newUserData != null) {
+        setUserData(newUserData);
+          setPreloader(false);
+      }
+    });
+
+    // Return the function to unsubscribe from the event so it gets removed on unmount
+    return unsubscribe;
+  }, [navigation]);
   // console.log(data);
   // console.log(zoneData[1].id);
+
   return (
     <View>
       {preloader && 
@@ -89,11 +86,11 @@ export default function EventsScreen({ navigation }: RootTabScreenProps<'TabOne'
                 <Text style={styles.title}>Participating Athletes</Text>
                 <ScrollView horizontal={true} style={styles.eventcontainer}>
                   {d.participants.map(participant =>
-                  <TouchableOpacity onPress={() => navigation.navigate('Participant', participant)}>
-                    <Image source={{uri: participant.thumbnail}} style={styles.eventimage} />
-                    <Text style={styles.eventtitle}>{participant.name}</Text>
-                  </TouchableOpacity>
-                    ) }
+                    <TouchableOpacity onPress={() => navigation.navigate('Participant', participant)}>
+                      <Image source={{uri: participant.thumbnail}} style={styles.eventimage} />
+                      <Text style={styles.eventtitle}>{participant.name}</Text>
+                    </TouchableOpacity>
+                  )}
                 </ScrollView>
               </View>
               }
@@ -106,18 +103,20 @@ export default function EventsScreen({ navigation }: RootTabScreenProps<'TabOne'
                 </TouchableOpacity>
               </View>
               <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}} lightColor="#fff" darkColor="#242424">
-                <TouchableOpacity
+                {d.register_link != null &&
+                  <TouchableOpacity
+                    onPress={async () => await WebBrowser.openBrowserAsync(d.register_link)}
+                    style={{ marginTop: 10, paddingHorizontal: 5, paddingVertical: 10 }}
+                  >
+                    <Text style={{backgroundColor: '#ffe51e', borderRadius: 15, paddingHorizontal: 30, paddingVertical: 10, color: "#000"}}>Register Now</Text>
+                  </TouchableOpacity>
+                }
+                {/* <TouchableOpacity
                   onPress={() => navigation.navigate('BuyTicket', d)}
                   style={{ marginTop: 10, paddingHorizontal: 5, paddingVertical: 10 }}
                 >
                   <Text style={{backgroundColor: '#ffe51e', borderRadius: 15, paddingHorizontal: 30, paddingVertical: 10, color: "#000"}}>Buy Tickets</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('Participate', d)}
-                  style={{ marginTop: 10, paddingHorizontal: 5, paddingVertical: 10 }}
-                >
-                  <Text style={{backgroundColor: '#ffe51e', borderRadius: 15, paddingHorizontal: 30, paddingVertical: 10, color: "#000"}}>Participate</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
               </View>
           </View>))}
           <Bottom />

@@ -11,32 +11,22 @@ export default function ZonesScreen({ navigation }: RootTabScreenProps<'TabOne'>
   const [data, setData] = React.useState([]);
   const [preloader, setPreloader] = React.useState(true);
   
-  React.useEffect(async () => {
-    //Check if user_id is set or not
-    //If not then send for Authentication
-    //else send to Home Screen
-  
-    // const token = await AsyncStorage.getItem('token');
-    // const rawdata = await fetch('https://expoapp.bodypower.com/public/api/zones', { 
-      //       method: 'GET',
-      //       headers: {
-        //         //Header Defination
-        //         'Content-Type':
-        //         'application/json',
-        //         'Authorization':
-        //         'Bearer ' + token,
-        //       },
-        //     });
-        // console.clear();
-        // await 
-        const data = new Data;
-        const newData = await data.getData('zones');
-        if(newData != null) {
-          setData(newData);
-          setPreloader(false);
-        }
-      });
-      // console.log(Data);
+  React.useEffect(() => {
+    const data = new Data;
+    const unsubscribe = navigation.addListener('focus', async () => {
+      // The screen is focused
+      // Call any action
+      const newData = await data.getData('zones');
+      if(newData != null) {
+        setData(newData);
+        setPreloader(false);
+      }
+    });
+
+    // Return the function to unsubscribe from the event so it gets removed on unmount
+    return unsubscribe;
+  }, [navigation]);
+      console.log(data);
   return (
     <View>
       {preloader && 
@@ -63,12 +53,16 @@ export default function ZonesScreen({ navigation }: RootTabScreenProps<'TabOne'>
                       <Text style={styles.title}>Events</Text>
                       <ScrollView horizontal={true} style={styles.eventcontainer}>
                         {d.events.map(event =>
-                          <TouchableOpacity
-                          onPress={() => navigation.navigate('Event', event)}
-                          >
-                            <Image source={{uri: event.thumbnail}} style={styles.eventimage} />
-                            <Text style={styles.eventtitle}>{event.name}</Text>
-                          </TouchableOpacity>
+                        <View lightColor="#fff" darkColor="#242424">
+                            <View lightColor="#fff" darkColor="#242424">
+                                <TouchableOpacity
+                                onPress={() => navigation.navigate('Event', event)}
+                                >
+                                  <Image source={{uri: event.thumbnail}} style={styles.eventimage} />
+                                  <Text style={styles.eventtitle}>{event.name}</Text>
+                                </TouchableOpacity>
+                              </View>
+                            </View>
                           ) }
                       </ScrollView>
                     </View>

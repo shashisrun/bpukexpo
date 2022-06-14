@@ -1,58 +1,10 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 import { ListItem, SearchBar } from "react-native-elements";
+import Data from "./../data/Data"
 
-  
-const DATA = [
-  {
-    id: "1",
-    title: "Data Structures",
-  },
-  {
-    id: "2",
-    title: "STL",
-  },
-  {
-    id: "3",
-    title: "C++",
-  },
-  {
-    id: "4",
-    title: "Java",
-  },
-  {
-    id: "5",
-    title: "Python",
-  },
-  {
-    id: "6",
-    title: "CP",
-  },
-  {
-    id: "7",
-    title: "ReactJs",
-  },
-  {
-    id: "8",
-    title: "NodeJs",
-  },
-  {
-    id: "9",
-    title: "MongoDb",
-  },
-  {
-    id: "10",
-    title: "ExpressJs",
-  },
-  {
-    id: "11",
-    title: "PHP",
-  },
-  {
-    id: "12",
-    title: "MySql",
-  },
-];
+const data = new Data;
+const DATA = async () => await data.getData('zone') 
   
 const Item = ({ title }) => {
   return (
@@ -62,7 +14,7 @@ const Item = ({ title }) => {
   );
 };
   
-const renderItem = ({ item }) => <Item title={item.title} />;
+const renderItem = ({ item }) => <Item title={item.name} />;
 
 class SearchScreen extends Component {
   constructor(props) {
@@ -78,7 +30,7 @@ class SearchScreen extends Component {
   
   searchFunction = (text) => {
     const updatedData = this.arrayholder.filter((item) => {
-      const item_data = `${item.title.toUpperCase()})`;
+      const item_data = `${item.name.toUpperCase()})`;
       const text_data = text.toUpperCase();
       return item_data.indexOf(text_data) > -1;
     });

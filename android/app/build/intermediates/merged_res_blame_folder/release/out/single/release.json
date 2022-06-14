@@ -1,0 +1,258 @@
+[
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_evilicons.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_evilicons.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_ionicons.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_ionicons.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_regular.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_regular.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-xxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontawesome5free.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontawesome5free.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_antdesign.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_antdesign.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_ionicons.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_ionicons.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-xhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_assets_fonts_spacemonoregular.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/assets_fonts_spacemonoregular.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_splashscreen_image.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/drawable-xxxhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontawesome5free_meta.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_feather.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_feather.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-mdpi_splashscreen_image.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/drawable-mdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_brands.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_brands.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontisto.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontisto.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_octicons.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_octicons.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_simplelineicons.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_simplelineicons.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable_splashscreen.xml.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/drawable/splashscreen.xml"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_entypo.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_entypo.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_evilicons.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_evilicons.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_foundation.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_foundation.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-xxxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_materialcommunityicons.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_materialcommunityicons.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_foundation.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_foundation.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialicons.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialicons.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontisto.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontisto.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-xhdpi_splashscreen_image.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/drawable-xhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_simplelineicons.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_simplelineicons.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_zocial.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_zocial.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_antdesign.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_antdesign.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-mdpi_assets_images_splash.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-mdpi/assets_images_splash.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_zocial.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_zocial.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_solid.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_fontawesome5_solid.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_entypo.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_entypo.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_materialicons.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_materialicons.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontawesome.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_fontawesome.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_feather.json.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_glyphmaps_feather.json"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-hdpi_splashscreen_image.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/drawable-hdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-mdpi_assets_images_favicon.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-mdpi/assets_images_favicon.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-hdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialcommunityicons.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_materialcommunityicons.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-xxhdpi_splashscreen_image.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/drawable-xxhdpi/splashscreen_image.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/drawable-mdpi_assets_images_icon.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/drawable-mdpi/assets_images_icon.png"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/raw_node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_octicons.ttf.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/build/generated/res/react/release/raw/node_modules_expo_vectoricons_build_vendor_reactnativevectoricons_fonts_octicons.ttf"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/shashisharma/Documents/bpukexpo/android/app/build/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shashisharma/Documents/bpukexpo/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    }
+]

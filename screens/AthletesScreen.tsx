@@ -15,34 +15,22 @@ export default function AthletesScreen({ navigation }: RootTabScreenProps<'TabOn
   const [visible, setVisible] = React.useState(false);
   const [index, setIndex] = React.useState(0);
   const [preloader, setPreloader] = React.useState(true);
-  
-  React.useEffect( async () => {
-    //Check if user_id is set or not
-    //If not then send for Authentication
-    //else send to Home Screen
-  
-    // const token = await AsyncStorage.getItem('token');
-    // const rawdata = await fetch('https://expoapp.bodypower.com/public/api/guests', { 
-    //       method: 'GET',
-    //       headers: {
-    //         //Header Defination
-    //         'Content-Type':
-    //         'application/json',
-    //         'Authorization':
-    //         'Bearer ' + token,
-    //       },
-    //     });
-    // const json = await rawdata.json();
-    // // console.log(json);
-    // setData(json);
 
+  React.useEffect(() => {
     const data = new Data;
-    const newData = await data.getData('guests');
-    if (newData != null){
-      setData(newData);
-      setPreloader(false);
-    }
-  });
+    const unsubscribe = navigation.addListener('focus', async () => {
+      // The screen is focused
+      // Call any action
+      const newData = await data.getData('guests');
+      if (newData != null){
+        setData(newData);
+        setPreloader(false);
+      }
+    });
+
+    // Return the function to unsubscribe from the event so it gets removed on unmount
+    return unsubscribe;
+  }, [navigation]);
   // console.log(d);
   console.log(data);
   // console.log(d);

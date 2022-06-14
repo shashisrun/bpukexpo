@@ -93,7 +93,6 @@ function RootNavigator() {
         />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Settings" component={SettingsScreen} />
-        <Stack.Screen name="Search" component={SearchScreen} />
         <Stack.Screen
           name="Participant"
           component={ParticipantScreen}
@@ -150,7 +149,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Notifications"
+      initialRouteName="Notification"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}
@@ -174,21 +173,7 @@ function BottomTabNavigator() {
                 style={{ marginRight: 15 }}
               />
             </Pressable>
-          ),
-          headerLeft: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Search')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="search"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginLeft: 15 }}
-              />
-            </Pressable>
-          ),
+          )
         })}
       />
       <BottomTab.Screen
@@ -210,21 +195,7 @@ function BottomTabNavigator() {
                 style={{ marginRight: 15 }}
               />
             </Pressable>
-          ),
-          headerLeft: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Search')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="search"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginLeft: 15 }}
-              />
-            </Pressable>
-          ),
+          )
         })}
       />
       <BottomTab.Screen
@@ -245,21 +216,7 @@ function BottomTabNavigator() {
                 style={{ marginRight: 15 }}
               />
             </Pressable>
-          ),
-          headerLeft: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Search')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="search"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginLeft: 15 }}
-              />
-            </Pressable>
-          ),
+          )
         })}
       />
       <BottomTab.Screen
@@ -280,21 +237,7 @@ function BottomTabNavigator() {
                 style={{ marginRight: 15 }}
               />
             </Pressable>
-          ),
-          headerLeft: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Search')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="search"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginLeft: 15 }}
-              />
-            </Pressable>
-          ),
+          )
         })}
       />
       <BottomTab.Screen
@@ -315,21 +258,7 @@ function BottomTabNavigator() {
                 style={{ marginRight: 15 }}
               />
             </Pressable>
-          ),
-          headerLeft: () => (
-            <Pressable
-              onPress={() => navigation.navigate('Search')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="search"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginLeft: 15 }}
-              />
-            </Pressable>
-          ),
+          )
         })}
       />
     </BottomTab.Navigator>

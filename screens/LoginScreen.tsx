@@ -10,8 +10,9 @@ import {
 } from 'react-native';
 
 import { Text, View } from '../components/Themed';
-
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
 
 import Loader from '../components/Loader';
 
@@ -35,21 +36,14 @@ const LoginScreen = ({navigation}) => {
     }
     setLoading(true);
     let dataToSend = {email: userEmail, password: userPassword};
-    let formBody = [];
-    for (let key in dataToSend) {
-      let encodedKey = encodeURIComponent(key);
-      let encodedValue = encodeURIComponent(dataToSend[key]);
-      formBody.push(encodedKey + '=' + encodedValue);
-    }
-    formBody = formBody.join('&');
 
-    await fetch('https://expoapp.bodypower.com/public/api/login', {
+    await fetch('https://expoapp.bodypower.com/api/login', {
       method: 'POST',
-      body: formBody,
+      body: JSON.stringify(dataToSend),
       headers: {
         //Header Defination
         'Content-Type':
-        'application/x-www-form-urlencoded;charset=UTF-8',
+        'application/json',
       },
     })
       .then((response) => response.json())
@@ -60,7 +54,6 @@ const LoginScreen = ({navigation}) => {
         // If server response message same as Data Matched
         if (responseJson.access_token) {
           AsyncStorage.setItem('token', responseJson.access_token);
-          console.log(responseJson.access_token);
           navigation.replace('Root');
         } else {
           setErrortext(responseJson.message);
